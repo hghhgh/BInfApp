@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6ba3290-24f2-43bd-9473-f2fe6448ec35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/get-probs/get-probs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/get-probs/get-probs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/get-probs/get-probs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/get-probs/get-probs.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/home.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -36,10 +28,10 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="editorconfig" value="1" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
           <entry key="html" value="18" />
           <entry key="js" value="2" />
-          <entry key="json" value="5" />
+          <entry key="json" value="7" />
           <entry key="scss" value="4" />
           <entry key="ts" value="33" />
           <entry key="xml" value="1" />
@@ -48,9 +40,9 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="18" />
-          <entry key="JSON" value="4" />
+          <entry key="JSON" value="6" />
           <entry key="JavaScript" value="2" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="SCSS" value="4" />
           <entry key="TypeScript" value="33" />
           <entry key="XML" value="1" />
@@ -66,7 +58,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="gitignore" value="6" />
           <entry key="html" value="224" />
+          <entry key="json" value="16" />
           <entry key="scss" value="18" />
           <entry key="ts" value="138" />
         </counts>
@@ -74,6 +68,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="224" />
+          <entry key="JSON" value="16" />
+          <entry key="PLAIN_TEXT" value="6" />
           <entry key="SCSS" value="18" />
           <entry key="TypeScript" value="138" />
         </counts>
@@ -103,11 +99,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/get-probs/get-probs.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
               <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package-lock.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="2597" column="63" selection-start-line="2597" selection-start-column="63" selection-end-line="2597" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -125,6 +148,11 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>hoek</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -148,6 +176,8 @@
         <option value="$PROJECT_DIR$/src/pages/get-probs/get-probs.ts" />
         <option value="$PROJECT_DIR$/src/pages/home/home.ts" />
         <option value="$PROJECT_DIR$/src/pages/get-probs/get-probs.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/package-lock.json" />
       </list>
     </option>
   </component>
@@ -211,43 +241,6 @@
             <path>
               <item name="BInfApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="BInfApp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BInfApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BInfApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BInfApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BInfApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BInfApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BInfApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BInfApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BInfApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="get-probs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BInfApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BInfApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BInfApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BInfApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="theme" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -350,23 +343,23 @@
       <updated>1539199114423</updated>
       <workItem from="1539199115675" duration="5805000" />
       <workItem from="1539264838005" duration="5593000" />
-      <workItem from="1539353978146" duration="1422000" />
+      <workItem from="1539353978146" duration="2074000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12820000" />
+    <option name="totallyTimeSpent" value="13472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="0" width="1317" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4976672" visible="true" weight="0.22282189" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4976672" visible="true" weight="0.22282189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.5023328" side_tool="true" weight="0.22282189" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32970452" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32970452" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -439,16 +432,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ionic.config.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.editorconfig">
@@ -528,6 +515,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="2597" column="63" selection-start-line="2597" selection-start-column="63" selection-end-line="2597" selection-end-column="63" />
         </state>
       </provider>
     </entry>
