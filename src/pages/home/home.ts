@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {ModalController, NavController} from 'ionic-angular';
+import {GetProbsPage} from "../get-probs/get-probs";
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,16 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public modalController: ModalController) {
 
+  }
+
+  openNewVarPage() {
+    let profileModal = this.modalController.create(GetProbsPage, { userId: 8675309 });
+    profileModal.onDidDismiss(data => {
+      console.log(data);
+    });
+    profileModal.present();
   }
 
 }
