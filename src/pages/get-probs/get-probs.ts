@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {IonicPage, NavController, NavParams, ViewController} from 'ionic-angular';
+import {IonicPage, ModalController, NavController, NavParams, ViewController} from 'ionic-angular';
+import {Storage} from "@ionic/storage";
 
 /**
  * Generated class for the GetProbsPage page.
@@ -15,8 +16,19 @@ import {IonicPage, NavController, NavParams, ViewController} from 'ionic-angular
 })
 export class GetProbsPage {
 
-  constructor(public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams) {
-    console.log('UserId', navParams.get('userId'));
+  id="";
+  name = "";
+  prob = 0.0;
+  sliderValue= 0;
+  constructor(public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams, private storage: Storage) {
+    console.log('name:', navParams.get('name'));
+    this.id = navParams.get('id');
+    this.name = navParams.get('name');
+    let k = "hprob_"+this.id.split("_")[1];
+    this.storage.get(k).then((nval) => {
+      this.prob = nval;
+      this.sliderValue = nval * 10000;
+    });
 
   }
 
@@ -25,8 +37,19 @@ export class GetProbsPage {
   }
 
   dismiss() {
-    let data = { 'foo': 'bar' };
+    let data = { name:this.name,prob: this.prob };
     this.viewCtrl.dismiss(data);
   }
 
+  canclePage(){
+    this.viewCtrl.dismiss()
+  }
+
+  updateProb(e: any) {
+    this.prob = this.sliderValue/10000.0;
+  }
+
+  updateSlideBar() {
+    this.sliderValue = this.prob*10000.0;
+  }
 }

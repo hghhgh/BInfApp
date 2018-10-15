@@ -1,0 +1,54 @@
+<!--
+  Generated template for the SetConditionalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>تعیین احتمال شرطی</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="!firstItem && !secondItem"> شرط</div>
+  <div *ngIf="firstItem && !secondItem"> احتمال</div>
+  <div *ngIf="!firstItem || !secondItem">
+    <ion-list>
+      <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+        تشخیص : {{item.title}}
+      </button>
+    </ion-list>
+  </div>
+  <div *ngIf="firstItem && secondItem" padding>
+    احتمال :
+    <b>{{secondItem.title}}</b>
+    به شرط :
+    <b>{{firstItem.title}}</b>
+    <hr>
+
+    <div dir="ltr">
+      P(T+ | H+) or sensitivity:
+      <ion-range min="0" max="1000" step="1" (ionChange)="updateP_Tp_Hp()" [(ngModel)]="sliderValueP_Tp_Hp">
+        <ion-label range-left>0</ion-label>
+        <ion-label range-right>1.0</ion-label>
+      </ion-range>
+    </div>
+    <ion-label color="primary" stacked>احتمال مثبت بودن تست به شرط مثبت بودن تشخیص:</ion-label>
+    <ion-input type="number" pattern="0.[0-9]" placeholder="0.###" [(ngModel)]="P_Tp_Hp" clearInput (ionChange)="updateSliderP_Tp_Hp()"></ion-input>
+    <hr>
+    <div dir="ltr">
+      P(T- | H-) or specificity :
+      <ion-range min="0" max="1000" step="1" (ionChange)="updateP_Tn_Hn()" [(ngModel)]="sliderValueP_Tn_Hn">
+        <ion-label range-left>0</ion-label>
+        <ion-label range-right>1.0</ion-label>
+      </ion-range>
+    </div>
+    <ion-label color="primary" stacked>احتمال منفی بودن تست به شرط منفی بودن تشخیص</ion-label>
+    <ion-input type="number" pattern="0.[0-9]" placeholder="0.###" [(ngModel)]="P_Tn_Hn" clearInput (ionChange)="updateSliderP_Tn_Hn()"></ion-input>
+
+    <button ion-button full (click)="saveAndReturn()">ثبت و بستن</button>
+
+  </div>
+</ion-content>

@@ -6,14 +6,34 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>GetProbs</ion-title>
-  </ion-navbar>
-
+  <ion-toolbar>
+    <ion-title>
+      ثبت مقدار احتمال پیشین(تخمین ما)
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="canclePage()">
+        <span ion-text color="primary" showWhen="ios">لغو</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <ion-label color="primary" stacked>نام مشکل(فرضیه) : {{name}}</ion-label>
+  <hr>
+  <div dir="ltr">
+    <ion-range min="0" max="10000" step="1" (ionChange)="updateProb()" [(ngModel)]="sliderValue">
+      <ion-label range-left>0</ion-label>
+      <ion-label range-right>1.0</ion-label>
+    </ion-range>
+  </div>
+    <ion-label color="primary" stacked>احتمال مثبت بودن تشخیص (براساس نرخ شیوع):</ion-label>
+    <ion-input type="number" pattern="0.[0-9]" placeholder="0.####" [(ngModel)]="prob" clearInput
+               (ionChange)="updateSlideBar()"></ion-input>
   <button ion-button full (click)="dismiss()">ثبت و بستن</button>
+
+  <!--<button ion-button full (click)="canclePage()">لغو</button>-->
 
 </ion-content>

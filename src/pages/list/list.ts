@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {ModalController, NavController, NavParams} from 'ionic-angular';
+import {Storage} from "@ionic/storage";
 
 @Component({
   selector: 'page-list',
@@ -8,9 +9,9 @@ import { NavController, NavParams } from 'ionic-angular';
 export class ListPage {
   selectedItem: any;
   icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+  items: Array<{key: string, title: string, icon: string}>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 
@@ -19,13 +20,28 @@ export class ListPage {
     'american-football', 'boat', 'bluetooth', 'build'];
 
     this.items = [];
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
+
+    this.storage.keys().then((val) => {
+      // console.log('keys ', val);
+      val.forEach(k => {
+        // console.log('k', k);
+        // console.log('k.indexOf(\'name\')', k.indexOf('name'));
+
+        // if(k.indexOf('name') >= 0)
+        {
+          this.storage.get(k).then((nval) => {
+            // console.log('nval', nval);
+            // var pk = k.split('_')[1];
+            this.items.push({
+              key: k,
+              title: nval,
+              icon:this.icons[Math.floor(Math.random() * this.icons.length)]
+            });
+          });
+        }
+
       });
-    }
+    });
   }
 
   itemTapped(event, item) {
@@ -33,5 +49,9 @@ export class ListPage {
     this.navCtrl.push(ListPage, {
       item: item
     });
+  }
+
+  clearAllData() {
+    this.storage.clear();
   }
 }

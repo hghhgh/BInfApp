@@ -1,10 +1,11 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import {ModalController, Nav, Platform} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import {Storage} from "@ionic/storage";
 
 @Component({
   templateUrl: 'app.html'
@@ -16,13 +17,23 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private storage: Storage) {
     this.initializeApp();
+
+    // this.storage.clear();
+    // set a key/value
+    this.storage.get('lastrun').then((val) => {
+      if(val == null){
+        this.storage.set('lasthypid', 1);
+        this.storage.set('lasttestid', 1);
+        this.storage.set('lastrun', new Date().getDate());
+      }
+    });
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'صفحه نخست', component: HomePage },
+      { title: 'تمام متغیرها', component: ListPage }
     ];
 
   }

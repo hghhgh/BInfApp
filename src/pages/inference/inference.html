@@ -1,0 +1,51 @@
+<!--
+  Generated template for the InferencePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>استنتاج</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <button ion-button full *ngIf="step >= 1">دلیل: {{step}}</button>
+  <div *ngIf="step >= 2" padding>
+    احتمال :
+    <b> {{firstItem.title}} </b>
+    باوجود :
+    <b> {{secondItem.title}} </b>
+    <div dir="ltr">
+      <ion-label color="primary" stacked>Probability Score (0.###):</ion-label>
+      <ion-input type="number" pattern="0.[0-9]" placeholder="0.###" [(ngModel)]="P_Hp_Tp" clearInput></ion-input>
+    </div>
+  </div>
+  <hr>
+  <div padding>
+    <ion-list *ngIf="step == 0">
+      <ion-item>
+        <ion-label color="primary" stacked>نام تشخیص :</ion-label>
+        <ion-input type="text" placeholder="نام تشخیص" [(ngModel)]="filtStr" (ionChange)="filterList('H')"></ion-input>
+      </ion-item>
+      <button ion-item *ngFor="let item of FHitems" (click)="itemTapped($event, item)">
+        تشخیص مثبت بودن : {{item.title}}
+      </button>
+    </ion-list>
+    <h3 *ngIf="step >= 2">
+      بروزرسانی با تست جدید :
+    </h3>
+    <ion-list *ngIf="step >= 1">
+      <ion-item>
+        <ion-label color="primary" stacked>نام تست :</ion-label>
+        <ion-input type="text" placeholder="نام تست" [(ngModel)]="filtStr" (ionChange)="filterList('T')"></ion-input>
+      </ion-item>
+      <button ion-item *ngFor="let item of FTitems" (click)="itemTapped($event, item)">
+        درصورت مثبت بودن : {{item.title}}
+      </button>
+    </ion-list>
+  </div>
+
+</ion-content>

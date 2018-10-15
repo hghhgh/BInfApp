@@ -3,16 +3,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>تعاریف</ion-title>
+    <ion-title>صفحه اصلی</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-<h3>تعریف متغیر</h3>
-  <button ion-button full (click)="openNewVarPage()">افزودن متغیر جدید</button>
+  <button ion-button full (click)="openNewVarPage()">افزودن تشخیص</button>
+  <button ion-button full (click)="openSetConditionalPage()">افزودن تست</button>
   <hr>
-  <h3>تعیین احتمال</h3>
-  <button ion-button full>تعیین احتمال پیشین</button>
-  <button ion-button full>تعیین احتمال شرطی</button>
+  <button ion-button full color="secondary" (click)="openInferencePage()">تشخیص(استنتاج)</button>
 </ion-content>
 

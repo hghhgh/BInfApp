@@ -1,0 +1,4 @@
+#Sat Oct 13 23:39:17 IRST 2018
+base.0=/home/ghiassi/Projects/fromGit/BInfApp/platforms/android/app/build/intermediates/transforms/dex/release/0
+path.0=classes.dex
+renamed.0=classes.dex
